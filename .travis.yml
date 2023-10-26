@@ -1,0 +1,9 @@
+sudo: required
+servicec:
+ - docker
+ 
+before_install:
+ - docker build -t singhsimar0721/simple-api .
+ 
+script:
+ - docket run -e CI=true singhsimar0721/simple-api  
